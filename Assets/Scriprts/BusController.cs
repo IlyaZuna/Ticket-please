@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class BusController : MonoBehaviour
 {
-    public float moveSpeed = 500f;   // Скорость движения
-    public float turnSpeed = 30f;   // Скорость поворота
+    public float moveSpeed = 5000f;   // Скорость движения
+    public float turnSpeed = 300f;   // Скорость поворота
 
     public WheelCollider frontLeftWheel;
     public WheelCollider frontRightWheel;
@@ -38,8 +38,8 @@ public class BusController : MonoBehaviour
         turn = Mathf.Clamp(turn, -maxSteerAngle, maxSteerAngle); // Ограничиваем угол поворота колес
 
         // Двигаем автобус вперед/назад
-        rearLeftWheel.motorTorque = move * 200f;
-        rearRightWheel.motorTorque = move * 200f;
+        rearLeftWheel.motorTorque = move * 300f;
+        rearRightWheel.motorTorque = move * 300f;
 
         // Поворот колес
         frontLeftWheel.steerAngle = turn;
