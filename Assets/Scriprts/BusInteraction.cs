@@ -12,6 +12,8 @@ public class BusInteraction : MonoBehaviour
 
     private bool isNearBus = false;
     private bool isInBus = false;
+    public Transform childObject;
+    public Transform parentObject;
 
     private void Start()
     {
@@ -60,6 +62,7 @@ public class BusInteraction : MonoBehaviour
     private void EnterBus()
     {
         // Отключаем персонажа и его камеру
+        childObject.SetParent(parentObject);
         player.SetActive(false);
         playerCamera.SetActive(false);
 
@@ -73,7 +76,8 @@ public class BusInteraction : MonoBehaviour
 
     private void ExitBus()
     {
-        // Включаем персонажа и его камеру
+        // Включаем персонажа и его      
+        childObject.SetParent(null);
         player.SetActive(true);
         playerCamera.SetActive(true);
 

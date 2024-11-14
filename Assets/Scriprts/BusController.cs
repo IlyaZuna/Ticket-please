@@ -5,23 +5,25 @@ using UnityEngine;
 
 public class BusController : MonoBehaviour
 {
-    public float moveSpeed = 5000f;   // Скорость движения
+    public float moveSpeed = 500f;   // Скорость движения
     public float turnSpeed = 300f;   // Скорость поворота
-
     public WheelCollider frontLeftWheel;
     public WheelCollider frontRightWheel;
     public WheelCollider rearLeftWheel;
     public WheelCollider rearRightWheel;
-
     public Transform frontLeftWheelModel;
     public Transform frontRightWheelModel;
     public Transform rearLeftWheelModel;
     public Transform rearRightWheelModel;
+    public Transform exitpoint;
 
     private Rigidbody rb;
-
     public float maxSteerAngle = 30f;  // Максимальный угол поворота колес
     public bool isDriver = false;
+
+    // Новые переменные для состояния дверей и остановки
+    public bool areDoorsOpen = false;  // Состояние дверей (открыты/закрыты)
+    public bool isAtStop = false;      // Находится ли автобус на остановке
 
     void Start()
     {
@@ -30,12 +32,18 @@ public class BusController : MonoBehaviour
 
     void Update()
     {
-        // Ввод для движения вперед и назад
+        // Проверяем, нажата ли клавиша "1" и находится ли автобус на остановке
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ToggleDoors();  // Вызов метода переключения состояния дверей
+        }
+
+        // Движение автобуса
         float move = -Input.GetAxis("Vertical") * moveSpeed; // W/S или стрелки
         float turn = Input.GetAxis("Horizontal") * turnSpeed; // A/D или стрелки
 
         // Ограничиваем угол поворота
-        turn = Mathf.Clamp(turn, -maxSteerAngle, maxSteerAngle); // Ограничиваем угол поворота колес
+        turn = Mathf.Clamp(turn, -maxSteerAngle, maxSteerAngle);
 
         // Двигаем автобус вперед/назад
         rearLeftWheel.motorTorque = move * 300f;
@@ -52,6 +60,13 @@ public class BusController : MonoBehaviour
         UpdateWheelPosition(rearRightWheel, rearRightWheelModel);
     }
 
+    // Метод для переключения состояния дверей
+    void ToggleDoors()
+    {
+        areDoorsOpen = !areDoorsOpen;// Меняем состояние дверей
+        Debug.Log("Двери " + (areDoorsOpen ? "открыты" : "закрыты"));
+    }
+
     // Обновляем позиции и вращения колес
     void UpdateWheelPosition(WheelCollider wheelCollider, Transform wheelModel)
     {
@@ -61,15 +76,16 @@ public class BusController : MonoBehaviour
         wheelModel.position = pos;
         wheelModel.rotation = rot;
     }
+
     public void EnableDriving()
     {
-        isDriver = true; // Включаем управление
-        enabled = true; // Включаем этот скрипт
+        isDriver = true;
+        enabled = true;
     }
 
     public void DisableDriving()
     {
-        isDriver = false; // Отключаем управление
-        enabled = false; // Отключаем этот скрипт
+        isDriver = false;
+        enabled = false;
     }
 }
