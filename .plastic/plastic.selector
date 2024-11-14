@@ -1,4 +1,0 @@
-repository "BusSim@unity_LplR13GBSHegoQ@cloud"
-  path "/"
-    br "/main"
-    co "/main"
