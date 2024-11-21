@@ -21,7 +21,7 @@ public class PassengerController : MonoBehaviour
         seatPointsList = seatPoints;
         manager = passengerManager;
 
-        // ѕолучаем точку под индексом 2 (если она есть)
+       
         int index = 2;
         if (busPointsQueue.Count > index)
         {

@@ -58,7 +58,7 @@ public class PassengerManager : MonoBehaviour
                 var passengerController = passenger.GetComponent<PassengerController>();
                 if (passengerController != null)
                 {
-                    passengerController.DenyMovement(); // Этот метод нужно добавить в PassengerController
+                    passengerController.DenyMovement(); 
                 }
             }
         }
