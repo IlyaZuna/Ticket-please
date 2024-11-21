@@ -17,6 +17,7 @@ public class BusController : MonoBehaviour
     public Transform rearRightWheelModel;
     public Transform exitpoint;
 
+
     private Rigidbody rb;
     public float maxSteerAngle = 30f;  // Максимальный угол поворота колес
     public bool isDriver = false;
@@ -60,13 +61,13 @@ public class BusController : MonoBehaviour
         UpdateWheelPosition(rearRightWheel, rearRightWheelModel);
     }
 
-    // Метод для переключения состояния дверей
+    // Метод для переключения состояния дверей...........................................................................................................................................................................................................
     void ToggleDoors()
     {
         areDoorsOpen = !areDoorsOpen;// Меняем состояние дверей
         Debug.Log("Двери " + (areDoorsOpen ? "открыты" : "закрыты"));
     }
-
+    //.....................................................................................................................................................................................................................................
     // Обновляем позиции и вращения колес
     void UpdateWheelPosition(WheelCollider wheelCollider, Transform wheelModel)
     {

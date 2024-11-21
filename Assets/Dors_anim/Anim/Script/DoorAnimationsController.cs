@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class DoorAnimationController : MonoBehaviour {
+    public BusController controller;
     public Animator door1Animator;
     public Animator door2Animator;
     public Animator door3Animator;
@@ -18,12 +19,14 @@ public class DoorAnimationController : MonoBehaviour {
         // Устанавливаем начальную скорость для всех анимаций
         SetAnimationSpeed(animationSpeed);
     }
-
+    
     void Update() {
-        if (Input.GetKeyDown(KeyCode.K))
+        bool open = controller.areDoorsOpen;
+        if (open)
         {
             PlayDoorAnimations();
         }
+        
     }
 
     void PlayDoorAnimations() {
