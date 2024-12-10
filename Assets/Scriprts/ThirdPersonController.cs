@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class ThirdPersonController : MonoBehaviour {
+public class ThirdPersonController : MonoBehaviour
+{
     public float moveSpeed = 5f;        // Скорость передвижения
     public float mouseSensitivity = 2f; // Чувствительность мыши
     public Transform cameraRig;         // Объект, к которому привязана камера
@@ -15,20 +16,23 @@ public class ThirdPersonController : MonoBehaviour {
 
     private float yaw = 0f;             // Угол поворота камеры по оси Y
 
-    void Start() {
+    void Start()
+    {
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>(); // Инициализация Animator
         Cursor.lockState = CursorLockMode.Locked; // Блокируем и скрываем курсор
         Cursor.visible = false; // Убедитесь, что курсор скрыт
     }
 
-    void Update() {
+    void Update()
+    {
         RotateCharacter();
         MoveCharacter();
         UpdateCameraPosition();
     }
 
-    private void RotateCharacter() {
+    private void RotateCharacter()
+    {
         // Получаем ввод с мыши для поворота по оси Y
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
 
@@ -39,7 +43,8 @@ public class ThirdPersonController : MonoBehaviour {
         transform.Rotate(Vector3.up, mouseX);
     }
 
-    private void MoveCharacter() {
+    private void MoveCharacter()
+    {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -61,7 +66,8 @@ public class ThirdPersonController : MonoBehaviour {
     }
 
 
-    private void UpdateCameraPosition() {
+    private void UpdateCameraPosition()
+    {
         // Вычисляем позицию камеры относительно персонажа
         Vector3 targetPosition = transform.position - cameraRig.forward * cameraDistance + Vector3.up * cameraHeight;
 
