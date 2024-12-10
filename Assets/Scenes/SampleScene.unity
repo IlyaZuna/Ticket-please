@@ -9442,7 +9442,6 @@ GameObject:
   - component: {fileID: 346929658}
   - component: {fileID: 346929657}
   - component: {fileID: 346929656}
-  - component: {fileID: 346929655}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -9450,30 +9449,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &346929655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346929654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5941bd71b3a97384c83e33e281112392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  stayIndex: 3
-  releaseKey: 13
-  Spisok1: 0
-  MoneyGive: 0
-  childObject: {fileID: 346929659}
-  parentObject: {fileID: 874451903}
-  billPrefabs:
-  - {fileID: 919132149155446097, guid: bdb461d333c7b9f4f8ff5e2de2307d80, type: 3}
-  - {fileID: 919132149155446097, guid: 128a1b68f1a069143b7093d00cb55da5, type: 3}
-  - {fileID: 919132149155446097, guid: 2e6759cbe7f3fe74b9926a9358636b66, type: 3}
-  spawnPoint: {fileID: 683982336}
 --- !u!136 &346929656
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26877,7 +26852,6 @@ GameObject:
   - component: {fileID: 944233030}
   - component: {fileID: 944233029}
   - component: {fileID: 944233028}
-  - component: {fileID: 944233027}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -26885,30 +26859,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &944233027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944233026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5941bd71b3a97384c83e33e281112392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  stayIndex: 3
-  releaseKey: 13
-  Spisok1: 0
-  MoneyGive: 0
-  childObject: {fileID: 944233031}
-  parentObject: {fileID: 874451903}
-  billPrefabs:
-  - {fileID: 919132149155446097, guid: bdb461d333c7b9f4f8ff5e2de2307d80, type: 3}
-  - {fileID: 919132149155446097, guid: 128a1b68f1a069143b7093d00cb55da5, type: 3}
-  - {fileID: 919132149155446097, guid: 2e6759cbe7f3fe74b9926a9358636b66, type: 3}
-  spawnPoint: {fileID: 683982336}
 --- !u!136 &944233028
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -36143,7 +36093,6 @@ GameObject:
   - component: {fileID: 1267040864}
   - component: {fileID: 1267040863}
   - component: {fileID: 1267040862}
-  - component: {fileID: 1267040861}
   m_Layer: 0
   m_Name: Capsule (3)
   m_TagString: Untagged
@@ -36151,30 +36100,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1267040861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267040860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5941bd71b3a97384c83e33e281112392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  stayIndex: 3
-  releaseKey: 13
-  Spisok1: 0
-  MoneyGive: 0
-  childObject: {fileID: 1267040865}
-  parentObject: {fileID: 874451903}
-  billPrefabs:
-  - {fileID: 919132149155446097, guid: bdb461d333c7b9f4f8ff5e2de2307d80, type: 3}
-  - {fileID: 919132149155446097, guid: 128a1b68f1a069143b7093d00cb55da5, type: 3}
-  - {fileID: 919132149155446097, guid: 2e6759cbe7f3fe74b9926a9358636b66, type: 3}
-  spawnPoint: {fileID: 683982336}
 --- !u!136 &1267040862
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -55268,7 +55193,6 @@ GameObject:
   - component: {fileID: 1967435091}
   - component: {fileID: 1967435090}
   - component: {fileID: 1967435089}
-  - component: {fileID: 1967435088}
   m_Layer: 0
   m_Name: Capsule (2)
   m_TagString: Untagged
@@ -55276,30 +55200,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1967435088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967435087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5941bd71b3a97384c83e33e281112392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  stayIndex: 3
-  releaseKey: 13
-  Spisok1: 0
-  MoneyGive: 0
-  childObject: {fileID: 1967435092}
-  parentObject: {fileID: 874451903}
-  billPrefabs:
-  - {fileID: 919132149155446097, guid: bdb461d333c7b9f4f8ff5e2de2307d80, type: 3}
-  - {fileID: 919132149155446097, guid: 128a1b68f1a069143b7093d00cb55da5, type: 3}
-  - {fileID: 919132149155446097, guid: 2e6759cbe7f3fe74b9926a9358636b66, type: 3}
-  spawnPoint: {fileID: 683982336}
 --- !u!136 &1967435089
 CapsuleCollider:
   m_ObjectHideFlags: 0
