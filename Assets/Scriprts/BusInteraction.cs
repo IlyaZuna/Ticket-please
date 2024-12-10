@@ -8,7 +8,6 @@ public class BusInteraction : MonoBehaviour
     public GameObject bus;          // Автобус, который будем контролировать
     public GameObject busCamera;    // Камера автобуса
     public GameObject playerCamera; // Камера персонажа
-    public KeyCode enterKey = KeyCode.F; // Кнопка для входа и выхода
 
     private bool isNearBus = false;
     private bool isInBus = false;
@@ -48,12 +47,12 @@ public class BusInteraction : MonoBehaviour
     private void Update()
     {
         // Если рядом с автобусом и нажата F, а персонаж не в автобусе
-        if (isNearBus && Input.GetKeyDown(enterKey) && !isInBus)
+        if (isNearBus && Input.GetKeyDown(KeyCode.F) && !isInBus)
         {
             EnterBus();
         }
         // Если персонаж уже в автобусе и нажата F, чтобы выйти
-        else if (isInBus && Input.GetKeyDown(enterKey))
+        else if (isInBus && Input.GetKeyDown(KeyCode.F))
         {
             ExitBus();
         }
@@ -88,4 +87,6 @@ public class BusInteraction : MonoBehaviour
         isInBus = false;
         Debug.Log("Press F to enter the bus.");
     }
+
+    
 }

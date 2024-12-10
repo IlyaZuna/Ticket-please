@@ -24,7 +24,7 @@ public class BusController : MonoBehaviour
 
     // Ќовые переменные дл€ состо€ни€ дверей и остановки
     public bool areDoorsOpen = false;  // —осто€ние дверей (открыты/закрыты)
-    public bool isAtStop = false;      // Ќаходитс€ ли автобус на остановке
+    public bool s = false;      // Ќаходитс€ ли автобус на остановке
 
     void Start()
     {
@@ -78,15 +78,6 @@ public class BusController : MonoBehaviour
         wheelModel.rotation = rot;
     }
 
-    public void EnableDriving()
-    {
-        isDriver = true;
-        enabled = true;
-    }
+     
 
-    public void DisableDriving()
-    {
-        isDriver = false;
-        enabled = false;
-    }
 }
