@@ -6,6 +6,10 @@ public class BusStopTrigger : MonoBehaviour
 {
     public bool isAtBusStop = false; // Переменная для отслеживания, находится ли автобус на остановке
 
+    private void Start()
+    {
+        isAtBusStop = true;
+    }
     private void OnTriggerEnter(Collider other)
     {        
         if (other.CompareTag("Bus"))
