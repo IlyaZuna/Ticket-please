@@ -18,6 +18,8 @@ public class ThirdPersonController : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>(); // Инициализация Animator
         Cursor.lockState = CursorLockMode.Locked; // Блокируем и скрываем курсор

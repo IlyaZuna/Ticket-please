@@ -34,7 +34,7 @@ public class BusController : MonoBehaviour
     void Update()
     {
         // Проверяем, нажата ли клавиша "1" и находится ли автобус на остановке
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             ToggleDoors();  // Вызов метода переключения состояния дверей
         }
